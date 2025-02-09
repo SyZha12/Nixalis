@@ -5,14 +5,15 @@ set(SUBDIRECTORIES
 set(SOURCE_FILES
     #[Names of source files]
         Application.cpp
-
+        Log.cpp
         CACHE INTERNAL "Source files"
 )
 set(HEADER_FILES
     #[Names of header files]
         Application.h
         Entry.h
-
+        Log.h
+        Core.h
         CACHE INTERNAL "Header files"
 )
 set(RELATIVE_PATH

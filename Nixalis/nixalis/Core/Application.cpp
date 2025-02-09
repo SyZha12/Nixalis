@@ -1,5 +1,5 @@
-#include <nixalis/Core/Application.h>
-#include <iostream>
+#include "Application.h"
+
 
 namespace Nixalis
 {
@@ -8,8 +8,4 @@ namespace Nixalis
 
     }
 
-    void Application::Hello() const
-    {
-        std::cout << "Hello World!\n";
-    }
 }

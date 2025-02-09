@@ -16,6 +16,7 @@ add_library(NIXALIS::NIXALIS ALIAS ${PROJECT_NAME})
 #[Set directories and search for CMakeLists.txt files to execute]
 set(DIRECTORIES
         nixalis
+        vendor
 )
 foreach(DIR ${DIRECTORIES})
     add_subdirectory(${DIR})

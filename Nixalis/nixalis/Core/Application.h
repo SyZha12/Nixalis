@@ -10,7 +10,6 @@ namespace Nixalis
     public:
         Application();
         virtual ~Application() = default;
-        void Hello() const;
     };
 
     extern Application* CreateApplication();

@@ -2,10 +2,14 @@
 #define ENTRY_H
 
 #include <nixalis/Core/Application.h>
+#include <nixalis/Core/Log.h>
 
 int main(int argc, char** argv)
 {
+    Nixalis::Log::Init();
+
     auto* application = Nixalis::CreateApplication();
+
     delete application;
 
     return 0;
