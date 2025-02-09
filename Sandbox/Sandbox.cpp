@@ -1,20 +1,21 @@
-#include "Sandbox.h"
-
+#include <Nixalis.h>
 #include <iostream>
 
-Sandbox::Sandbox()
+class Sandbox : public Nixalis::Application
 {
+public:
+    Sandbox()
+    {
+        Hello();
+    }
+    ~Sandbox()
+    {
 
-}
+    }
+};
 
-Sandbox::~Sandbox()
+Nixalis::Application* Nixalis::CreateApplication()
 {
-
-}
-
-int main(int argc, char** argv)
-{
-    std::cout << "Hello World!" << std::endl;
-
-    return 0;
+    std::cout << "Creating Sandbox Application" << std::endl;
+    return new Sandbox();
 }
