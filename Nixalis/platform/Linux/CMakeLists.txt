@@ -1,27 +1,20 @@
 #[Set Properties]
 set(SUBDIRECTORIES
-    #[Names of subdirectories]
+        #[Names of subdirectories]
 )
 set(SOURCE_FILES
-    #[Names of source files]
-        Application.cpp
-        Log.cpp
-        Window.cpp
+        #[Names of source files]
+        LinuxWindow.cpp
         CACHE INTERNAL "Source files"
 )
 set(HEADER_FILES
-    #[Names of header files]
-        Application.h
-        Entry.h
-        Log.h
-        Core.h
-        Keys.h
-        Window.h
+        #[Names of header files]
+        LinuxWindow.h
         CACHE INTERNAL "Header files"
 )
 set(RELATIVE_PATH
-    #[Relative path for include]
-        Nixalis/nixalis
+        #[Relative path for include]
+        Nixalis/platform
 )
 
 #[Execute Properties]

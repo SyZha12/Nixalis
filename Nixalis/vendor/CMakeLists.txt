@@ -3,6 +3,7 @@
 ##############################################################################
 #[Set directories and search for CMakeLists.txt files to execute]
 set(DIRECTORIES
+        sdl
         spdlog
 )
 foreach(DIR ${DIRECTORIES})
@@ -10,5 +11,6 @@ foreach(DIR ${DIRECTORIES})
 endforeach()
 
 target_include_directories(${PROJECT_NAME} PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/sdl/include
         ${CMAKE_CURRENT_SOURCE_DIR}/spdlog/include
 )

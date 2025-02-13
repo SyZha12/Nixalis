@@ -1,10 +1,10 @@
 #ifndef LOG_H
 #define LOG_H
 
+// Custom logger using the spdlog library
 #include <memory>
-#include <spdlog/spdlog.h>
 
-#include <nixalis/Core/Core.h>
+#include <spdlog/spdlog.h>
 
 //==================LOGGING MACROS==================//
 #define INFO(...)  Nixalis::Log::returnEngineLogger()->info(__VA_ARGS__)
