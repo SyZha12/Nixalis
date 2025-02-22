@@ -2,6 +2,7 @@
 set(SUBDIRECTORIES
         #[Names of subdirectories]
         Linux
+        SDL
 )
 set(FILES
         #[Names of source files]

@@ -15,10 +15,12 @@ namespace Nixalis
         virtual ~Application() = default;
 
         void Run();
+        void OnEvent();
     private:
         bool m_Running = true;
 
         std::unique_ptr<Window> m_Window;
+        std::unique_ptr<Window> m_Window2;
         SDL_Event m_Event;
     };
 

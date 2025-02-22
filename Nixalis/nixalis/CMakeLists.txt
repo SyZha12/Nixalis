@@ -2,6 +2,7 @@
 set(SUBDIRECTORIES
     #[Names of subdirectories]
         Core
+        Event
 )
 set(FILES
     #[Names of source files]

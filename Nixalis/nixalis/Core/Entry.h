@@ -9,7 +9,9 @@ int main(int argc, char** argv)
     Nixalis::Log::Init();
 
     auto* application = Nixalis::CreateApplication();
+
     application->Run();
+
     delete application;
 
     return 0;

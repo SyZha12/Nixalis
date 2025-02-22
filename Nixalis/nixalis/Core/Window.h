@@ -30,9 +30,14 @@ namespace Nixalis
         virtual void Update() = 0;
         virtual void Close() = 0;
 
-        virtual unsigned int getWidth() const = 0;
-        virtual unsigned int getHeight() const = 0;
-        virtual bool isClosed() const = 0;
+        virtual unsigned int GetWidth() const = 0;
+        virtual unsigned int GetHeight() const = 0;
+        virtual int GetWindowID() const = 0;
+
+        virtual void SetWidth(unsigned int width) = 0;
+        virtual void SetHeight(unsigned int height) = 0;
+
+        virtual bool IsClosed() const = 0;
     private:
     };
 }

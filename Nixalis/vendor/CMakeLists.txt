@@ -3,6 +3,7 @@
 ##############################################################################
 #[Set directories and search for CMakeLists.txt files to execute]
 set(DIRECTORIES
+        imgui
         sdl
         spdlog
 )

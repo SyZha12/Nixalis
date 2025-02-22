@@ -3,16 +3,20 @@
 
 #include <SDL3/SDL.h>
 
+#include "nixalis/Core/Keys.h"
 #include "nixalis/Core/Window.h"
 #include "nixalis/Core/Log.h"
 
 
 // template<typename OStream>
-// OStream& operator<<(OStream &os, const Test& msg)
+// OStream& operator<<(OStream &os, const Nixalis::KeyCode msg)
 // {
-//     fmt::format_to(std::ostream_iterator<char>(os), "{:04X}", msg.code);
+//     fmt::format_to(std::ostream_iterator<char>(os), "{:04X}", msg);
 //     return os;
 // }
+
+
+// auto format_as(Nixalis::Keys::KeyCode Key) { return fmt::underlying(Key); }
 
 namespace Nixalis
 {
@@ -25,9 +29,14 @@ namespace Nixalis
         void HandleEvent(SDL_Event& event) override;
         void Update() override;
 
-        unsigned int getWidth() const override;
-        unsigned int getHeight() const override;
-        bool isClosed() const override;
+        unsigned int GetWidth() const override;
+        unsigned int GetHeight() const override;
+        int GetWindowID() const override;
+
+        void SetWidth(unsigned int width) override;
+        void SetHeight(unsigned int height) override;
+
+        bool IsClosed() const override;
     private:
         void Init(const WindowProperties& windowProperties) override;
         void Close() override;
@@ -38,11 +47,11 @@ namespace Nixalis
             unsigned int width, height;
 
             SDL_Window* window;
+            SDL_Renderer* renderer;
             int windowID;
 
             bool isClosed;
         } m_Properties;
-        // Properties m_Properties;
 
         SDL_Event m_Event;
 
