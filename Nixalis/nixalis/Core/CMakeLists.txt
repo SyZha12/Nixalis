@@ -7,6 +7,8 @@ set(SOURCE_FILES
         Application.cpp
         Log.cpp
         Window.cpp
+        Layer.cpp
+        LayerStack.cpp
         CACHE INTERNAL "Source files"
 )
 set(HEADER_FILES
@@ -17,6 +19,8 @@ set(HEADER_FILES
         Core.h
         Keys.h
         Window.h
+        Layer.h
+        LayerStack.h
         CACHE INTERNAL "Header files"
 )
 set(RELATIVE_PATH

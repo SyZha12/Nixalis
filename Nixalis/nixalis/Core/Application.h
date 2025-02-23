@@ -4,6 +4,8 @@
 #include <SDL3/SDL.h>
 
 #include <nixalis_export.h>
+
+#include "LayerStack.h"
 #include "nixalis/Core/Window.h"
 
 namespace Nixalis
@@ -15,13 +17,15 @@ namespace Nixalis
         virtual ~Application() = default;
 
         void Run();
-        void OnEvent();
+        void PushLayer(Layer* layer);
+        void PushOverlay(Layer* layer);
     private:
         bool m_Running = true;
 
         std::unique_ptr<Window> m_Window;
         std::unique_ptr<Window> m_Window2;
         SDL_Event m_Event;
+        LayerStack m_LayerStack;
     };
 
     extern Application* CreateApplication();

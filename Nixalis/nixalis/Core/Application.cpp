@@ -2,8 +2,9 @@
 
 // #include <iostream>
 
+#include <imgui.h>
+
 #include "nixalis/Core/Log.h"
-#include "vendor/imgui/imgui.h"
 
 namespace Nixalis
 {
@@ -19,9 +20,6 @@ namespace Nixalis
         {
             while(SDL_PollEvent(&m_Event) != 0)
             {
-                // SDL_EVENT_WINDOW_MOVED = 517
-                // SDL_EVENT_WINDOW_RESIZED = 518
-                // After resizing we get 516, 517, 518, 519, 533
                 if(m_Event.type == SDL_EVENT_QUIT)
                 {
                     m_Running = false;
@@ -35,5 +33,17 @@ namespace Nixalis
             // INFO("Time {}", time);
             m_Window->Update();
         }
+    }
+
+    void Application::PushLayer(Layer* layer)
+    {
+        m_LayerStack.PushLayer(layer);
+        layer->OnAttach();
+    }
+
+    void Application::PushOverlay(Layer* layer)
+    {
+        m_LayerStack.PushOverlay(layer);
+        layer->OnAttach();
     }
 }

@@ -21,6 +21,11 @@ namespace Nixalis
         if(event.window.windowID == m_Properties.windowID)
         {
             INFO("SDL_Event Window 1 {} & Window {}", event.type, event.window.windowID);
+            if(event.type == SDL_EVENT_WINDOW_RESIZED)
+            {
+                SetWidth(event.window.data1);
+                SetHeight(event.window.data2);
+            }
         }
     }
 
